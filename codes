@@ -1,0 +1,36 @@
+from datetime import datetime
+now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+print(f"Date: {now}")
+print("Welcome to the Trader's Logv1! ")
+name = input(f" What is your name? ")
+print(f" Hello {name}! ")
+coin = input(f" What coin are you trading? ")
+if(coin.lower() == "btc "):
+    print("Bitcoin is the king of coins! But be careful, it is a very volatile coin. ")
+elif(coin.lower() == "eth "):
+    print("Ethereum has strong ecosystem potantial. But gas fees can be a problem. ")
+else:
+    print(f" The {coin} is not a recognized coin. But every coin is a good coin if you know what are you doing. ")
+trade_type = input(f" Did you buy it spot or futures? ").lower()
+print("Great choice!")
+reason = input(f" Why did you enter into this process?(Is it a technical signal, a piece of news or just a feeling?) ")
+print("Your reason is " + reason + ".")
+print("Loading... ")
+print("--------------------TODAY'S LOG-------------------- ")
+print("Name: " + name)
+print("Coin: " + coin)
+print("Trade Type: " + trade_type)
+print("Reason: " + reason)
+
+print("--------------------OUR OPINION------------------ ")
+if trade_type == "futures":
+    print("Futures can be a good trade in the short term, but it is a very risky trade and is not recommended without professionalism. ")
+    print("Good luck! ")
+elif trade_type == "spot":
+    print("Spot transactions can be good long-term investments and are less risky. But patience is crucial. ")
+else:
+    print(f" The {trade_type} is not a recognized trade type. But every trade is a good trade if you know what you are doing. ")
+
+print("--------------------END OF LOG----------------------")
+print("An investment in knowledge pays the best interest. - Benjamin Franklin")
+print("Thank you for using the Trader's Logv1! ")
